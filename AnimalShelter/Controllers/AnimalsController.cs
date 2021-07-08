@@ -40,19 +40,19 @@ namespace AnimalShelter.Controllers
        return await query.ToListAsync();
     }
 
-//     // GET: api/Animals/5
-//     [HttpGet("{id}")]
-//     public async Task<ActionResult<Animal>> GetAnimal(int id)
-//     {
-//       var animal = await _db.Animals.FindAsync(id);
+    // GET: api/Animals/5
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Animal>> GetAnimal(int id)
+    {
+      var animal = await _db.Animals.FindAsync(id);
 
-//       if (animal == null)
-//       {
-//         return NotFound();
-//       }
+      if (animal == null)
+      {
+        return NotFound();
+      }
 
-//       return animal;
-//     }
+      return animal;
+    }
 
 //     // PUT: api/Animals/5
 //     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
