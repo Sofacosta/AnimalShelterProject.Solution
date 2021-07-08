@@ -54,76 +54,76 @@ namespace AnimalShelter.Controllers
       return animal;
     }
 
-//     // PUT: api/Animals/5
-//     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-//     [HttpPut("{id}")]
-//     public async Task<IActionResult> PutAnimal(int id, Animal animal)
-//     {
-//       if (id != animal.AnimalId)
-//       {
-//         return BadRequest();
-//       }
+    // PUT: api/Animals/5
+    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutAnimal(int id, Animal animal)
+    {
+      if (id != animal.AnimalId)
+      {
+        return BadRequest();
+      }
 
-//       _db.Entry(animal).State = EntityState.Modified;
+      _db.Entry(animal).State = EntityState.Modified;
 
-//       try
-//       {
-//         await _db.SaveChangesAsync();
-//       }
-//       catch (DbUpdateConcurrencyException)
-//       {
-//         if (!AnimalExists(id))
-//         {
-//           return NotFound();
-//         }
-//         else
-//         {
-//           throw;
-//         }
-//       }
+      try
+      {
+        await _db.SaveChangesAsync();
+      }
+      catch (DbUpdateConcurrencyException)
+      {
+        if (!AnimalExists(id))
+        {
+          return NotFound();
+        }
+        else
+        {
+          throw;
+        }
+      }
 
-//       return NoContent();
-//     }
+      return NoContent();
+    }
 
-//     // POST: api/Animals
-//     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-//     [HttpPost]
-//     public async Task<ActionResult<Animal>> Post(Animal animal)
-//     {
-//       _db.Animals.Add(animal);
-//       await _db.SaveChangesAsync();
+    // POST: api/Animals
+    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+    [HttpPost]
+    public async Task<ActionResult<Animal>> Post(Animal animal)
+    {
+      _db.Animals.Add(animal);
+      await _db.SaveChangesAsync();
 
-//       return CreatedAtAction(nameof(GetAnimal), new { id = animal.AnimalId }, animal);
-//     }
+      return CreatedAtAction(nameof(GetAnimal), new { id = animal.AnimalId }, animal);
+    }
 
-//     // DELETE: api/Animals/5
-//     [HttpDelete("{id}")]
-//     public async Task<IActionResult> DeleteAnimal(int id)
-//     {
-//       var animal = await _db.Animals.FindAsync(id);
-//       if (animal == null)
-//       {
-//         return NotFound();
-//       }
+    // DELETE: api/Animals/5
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteAnimal(int id)
+    {
+      var animal = await _db.Animals.FindAsync(id);
+      if (animal == null)
+      {
+        return NotFound();
+      }
 
-//       _db.Animals.Remove(animal);
-//       await _db.SaveChangesAsync();
+      _db.Animals.Remove(animal);
+      await _db.SaveChangesAsync();
 
-//       return NoContent();
-//     }
+      return NoContent();
+    }
 
-//     private bool AnimalExists(int id)
-//     {
-//       return _db.Animals.Any(e => e.AnimalId == id);
-//     }
-//   }
-// }
-// // return NoContent();
-// //         }
-
-// //         private bool AnimalExists(int id)
-// // {
-// //   return _db.Animals.Any(e => e.AnimalId == id);
-// // }
+    private bool AnimalExists(int id)
+    {
+      return _db.Animals.Any(e => e.AnimalId == id);
     }
   }
+}
+// return NoContent();
+//         }
+
+//         private bool AnimalExists(int id)
+// {
+//   return _db.Animals.Any(e => e.AnimalId == id);
+// }
+//     }
+//   }
