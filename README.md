@@ -125,9 +125,7 @@ Contact me at sofiaacostarascon@gmail.com
 - .NET Core 5.0.1
 - ASP.NET Core MVC
 - ASP.NET Core Razor Pages
-- Bootstrap
 - C#
-- CSS
 - Entity Framework Core
 - GitHub
 - HTML
