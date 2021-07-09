@@ -4,11 +4,11 @@
 
 </div>
 
-<h3 align="center">An API application to list the available cats and dogs at the shelter. Initiated: 07-03-2021 Modified:</h3>
+<h3 align="center">An API application to list the available cats and dogs at the shelter. Initiated: 07-03-2021 Modified: 07-08-2021</h3>
 <h4 align="center"> By Sofia Acosta</h4>
 
 ## Description
- A RESTful API application that manages data for an Animal shelter. An unauthorized user can perform a GET request to retrieve data for available cats and dogs at a shelter. An authorizes user can create, update and delete the data. 
+ A RESTful API application that manages data for an Animal shelter. A user can perform different requests to retrieve or modify data for available cats and dogs at a shelter. Swagger is used in the Index of the application to manage data.
 
 ## Setup/Installation Requirements
 
@@ -48,12 +48,9 @@ MySQL is a type of database software used to create, edit, query, and manage SQL
 - Please [Click Here](https://dev.mysql.com/downloads/workbench/) to install the correct version for your machine
 - Open MySQL Workbench and select `Local instance 3306 server`. You will need to enter the password you selected
 
-##### Postman
-To be able to interact with the API via Postman, please follow the instructions:
-- Go to appsettings.json and replace PASSWORD for your own.
-- Create a new database through Entity with the command dotnet ef database update
+##### Swagger
+The swagger documentation is used to test and manage the different endpoints available in this API: Get, Put, Post and Delete. 
  
-
 ##### Compiling
 
 - Navigate to the TODO folder in the command line
@@ -118,10 +115,6 @@ Create a connection string to connect the database to the web application
 
 - No known bugs
 
-## Notes and Resources
-
-N/A
-
 ## Support and Contact Details
 
 If any errors or bugs occur with installation, delete both bin and obj folders and follow the Compiling and Installing Packages instructions again. Get help or report a bug you have found in the .NET platform at [.NET Support](https://dotnet.microsoft.com/platform/support). 
@@ -142,6 +135,7 @@ Contact me at sofiaacostarascon@gmail.com
 - MySQL & MySQL Workbench
 - VS Code
 - Razor
+- Swagger 
 
 ### License
 
